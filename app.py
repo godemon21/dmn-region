@@ -18,10 +18,7 @@ def _get_openid_headers(base_url):
         "Accept-Language": "en-US,en;q=0.9",
         "Connection": "keep-alive",
         "Content-Type": "application/json",
-        "Cookie": "language=en; region=AE; source=pc; "
-                  "mspid2=4b56e8f65e7a8454c2dd9e9f1eaff5cc; "
-                  "datadome=KL9MsojXXfGr3EVofh2EaneVm0NSUft17dWmdqeNNXfGjZy8z4RGb9qx6pcQe76cCdaNuNj65h0JScoL7kzvKC4zVasHj2vKRQrNpU "
-                  "session_key=8v9jqroyx56neo5np4oyujbmxt5dsqho;",
+        "Cookie": "mspid2=de5f1157b45d4416e55d9fbcdd03abef; language=en; region=AE; source=pc; datadome=mubUuTeNiSNyw~Ujzfvmx8vb4u4YvWmly~bEgPg63aNKd844XfXryVEudTa5L_bQPO0M4BqTJhpG~WylVzEy06FzUiLWyZG55HvxCZFWoO_FzymyBySwJPGv~c1upvow; session_key=8v9jqroyx56neo5np4oyujbmxt5dsqho",
         "Host": host,
         "Origin": base_url,
         "Referer": base_url,
