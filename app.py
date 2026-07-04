@@ -18,18 +18,28 @@ def _get_openid_headers(base_url):
         "Accept-Language": "en-US,en;q=0.9",
         "Connection": "keep-alive",
         "Content-Type": "application/json",
-        "Cookie": "mspid2=de5f1157b45d4416e55d9fbcdd03abef; language=en; region=AE; source=pc; datadome=mubUuTeNiSNyw~Ujzfvmx8vb4u4YvWmly~bEgPg63aNKd844XfXryVEudTa5L_bQPO0M4BqTJhpG~WylVzEy06FzUiLWyZG55HvxCZFWoO_FzymyBySwJPGv~c1upvow; session_key=8v9jqroyx56neo5np4oyujbmxt5dsqho",
+        "Cookie": (
+            '_ga': 'GA1.1.2123120599.1674510784',
+            '_fbp': 'fb.1.1674510785537.363500115',
+            '_ga_7JZFJ14B0B': 'GS1.1.1674510784.1.1.1674510789.0.0.0',
+            'source': 'mb',
+            'region': 'MA',
+            'language': 'ar',
+            '_ga_TVZ1LG7BEB': 'GS1.1.1674930050.3.1.1674930171.0.0.0',
+            'datadome': '6h5F5cx_GpbuNtAkftMpDjsbLcL3op_5W5Z-npxeT_qcEe_7pvil2EuJ6l~JlYDxEALeyvKTz3~LyC1opQgdP~7~UDJ0jYcP5p20IQlT3aBEIKDYLH~cqdfXnnR6FAL0',
+            'session_key': 'efwfzwesi9ui8drux4pmqix4cosane0y'
+        )
         "Host": host,
         "Origin": base_url,
         "Referer": base_url,
         "Sec-Fetch-Dest": "empty",
         "Sec-Fetch-Mode": "cors",
         "Sec-Fetch-Site": "same-origin",
-        "User-Agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) "
-                      "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36",
-        "sec-ch-ua": '"Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"',
+        "User-Agent": "'Mozilla/5.0 (Linux; Android 11; Redmi Note 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Mobile Safari/537.36'",
+        "sec-ch-ua": '"Chromium";v="107", "Not=A?Brand";v="24"',
         "sec-ch-ua-mobile": "?1",
-        "sec-ch-ua-platform": '"Android"'
+        "sec-ch-ua-platform": '"Android"',
+        'x-datadome-clientid': '6h5F5cx_GpbuNtAkftMpDjsbLcL3op_5W5Z-npxeT_qcEe_7pvil2EuJ6l~JlYDxEALeyvKTz3~LyC1opQgdP~7~UDJ0jYcP5p20IQlT3aBEIKDYLH~cqdfXnnR6FAL0'
     }
 
 
