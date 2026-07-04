@@ -18,10 +18,10 @@ def _get_openid_headers(base_url):
         "Accept-Language": "en-US,en;q=0.9",
         "Connection": "keep-alive",
         "Content-Type": "application/json",
-        "Cookie": "source=pc; region=PK; language=en; "
+        "Cookie": "language=en; region=AE; source=pc; "
                   "mspid2=4b56e8f65e7a8454c2dd9e9f1eaff5cc; "
-                  "datadome=465CY_MInLmrrYVl4rCZo4ltk_j~~fJgn770GVVBXsV~EoF_BnK9xNJwot4cspq7VSzSa77ZwARm_6IpT8twIt941vFi0dR0oAZcJikHRWCoApFKF9eeI8TREH3r0IAl; "
-                  "session_key=x0jshjilr25wwgg993pvlb3wnlwcudct",
+                  "datadome=KL9MsojXXfGr3EVofh2EaneVm0NSUft17dWmdqeNNXfGjZy8z4RGb9qx6pcQe76cCdaNuNj65h0JScoL7kzvKC4zVasHj2vKRQrNpU "
+                  "session_key=8v9jqroyx56neo5np4oyujbmxt5dsqho;",
         "Host": host,
         "Origin": base_url,
         "Referer": base_url,
