@@ -16,7 +16,7 @@ app = Flask(__name__)
 SESSION_CACHE = {
     "session": None,
     "created_at": None,
-    "ttl_minutes": 25,  # Refresh every 25 minutes
+    "ttl_minutes": 5,  # Refresh every 25 minutes
     "lock": threading.Lock()
 }
 
@@ -158,6 +158,16 @@ def get_openid_data(account_id, retry_count=0, max_retries=2):
     except Exception as e:
         print(f"❌ Unexpected Error: {e}")
         return {"success": False, "error": f"Unexpected error: {str(e)}"}
+    
+@app.route("/", methods=["GET"])
+def index():
+    return jsonify({
+        "credit": "https://discord.gg/UxzC23zaZs",
+        "message": "Welcome to the Free Fire Region API",
+        "status": "API is running",
+        "endpoints": "/region?uid=<uid>",
+        "example": "/region?uid=123456789"
+})
 
 
 @app.route("/region", methods=["GET"])
@@ -210,7 +220,7 @@ def force_refresh():
 if __name__ == "__main__":
     print("🚀 Starting Flask API with Auto Cookie Management")
     print("📍 Endpoints:")
-    print("   GET  /username?uid=<user_id>")
+    print("   GET  /region?uid=<user_id>")
     print("   GET  /health")
     print("   POST /refresh-session")
     print("-" * 50)
