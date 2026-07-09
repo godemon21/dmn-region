@@ -42,6 +42,7 @@ Without a valid cookie → the API cannot retrieve any data.
 This project is intended for educational purposes only.
 
 ## Credits
-https://great.thug4ff.com/
+is it needs??
+
 
 
