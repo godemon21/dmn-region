@@ -16,7 +16,7 @@ app = Flask(__name__)
 SESSION_CACHE = {
     "session": None,
     "created_at": None,
-    "ttl_minutes": 25,  # Refresh every 25 minutes
+    "ttl_minutes": 5,  # Refresh every 25 minutes
     "lock": threading.Lock()
 }
 
@@ -184,6 +184,30 @@ def api_openid():
         return jsonify(result), 404 if "not found" in str(result.get("error", "")).lower() else 500
     
     return jsonify(result), 200
+
+
+@app.route("/byacc", methods=["GET"])
+def acc_openid():
+    """API endpoint to get user info by account token"""
+    token = request.args.get("acc")
+
+    if not token:
+        return jsonify({"success": False, "error": "Missing 'acc' parameter"}), 400
+    access_token = token
+    inspect_url = f"https://100067.connect.garena.com/oauth/token/inspect?token={access_token}"
+    inspect_headers = {
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "close",
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Host": "100067.connect.garena.com",
+    "User-Agent": "GarenaMSDK/4.0.19P4(G011A ;Android 9;en;US;)"
+}
+    try:
+        resp = requests.get(inspect_url, headers=inspect_headers, timeout=10)
+        data = resp.json()
+    except Exception as e:
+        print("[!] Failed to inspect access token:", e)
+    return jsonify(data), 200
 
 
 @app.route("/health", methods=["GET"])
