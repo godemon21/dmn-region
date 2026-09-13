@@ -16,7 +16,7 @@ app = Flask(__name__)
 SESSION_CACHE = {
     "session": None,
     "created_at": None,
-    "ttl_minutes": 5,  # Refresh every 25 minutes
+    "ttl_minutes": 25,  # Refresh every 25 minutes
     "lock": threading.Lock()
 }
 
