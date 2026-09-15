@@ -16,7 +16,7 @@ app = Flask(__name__)
 SESSION_CACHE = {
     "session": None,
     "created_at": None,
-    "ttl_minutes": 25,  # Refresh every 25 minutes
+    "ttl_minutes": 5,  # Refresh every 25 minutes
     "lock": threading.Lock()
 }
 
@@ -207,7 +207,17 @@ def acc_openid():
         data = resp.json()
     except Exception as e:
         print("[!] Failed to inspect access token:", e)
-    return jsonify(data), 200
+    return jsonify({
+                    "app_id": data.get("app_id"),
+                    "create_time": data.get("create_time"),
+                    "expiry_time": data.get("expiry_time"),
+                    "login_platform": data.get("login_platform"),
+                    "login_type": data.get("login_type"),
+                    "main_active_platform": data.get("main_active_platform"),
+                    "open_id": data.get("open_id"),
+                    "platform": data.get("platform"),
+                    "access_token": access_token
+                   }), 200
 
 
 @app.route("/health", methods=["GET"])
